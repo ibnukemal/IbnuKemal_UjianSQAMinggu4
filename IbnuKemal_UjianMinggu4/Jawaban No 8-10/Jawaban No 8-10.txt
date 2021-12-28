@@ -1,0 +1,8 @@
+Jawaban no 8-10
+
+8. SELECT avg(harga_jual) as "Rata-rata Harga Jual" From kendaraan
+
+9. SELECT count(merk) as "Rata-rata Harga Jual" From kendaraan WHERE merk = "Toyota"
+
+10. SELECT nomor_polisi, merk, tipe, tahun, harga_jual From kendaraan 
+    WHERE tahun < 1990 ORDER BY tahun ASC

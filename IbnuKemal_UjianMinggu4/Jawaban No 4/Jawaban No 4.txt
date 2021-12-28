@@ -1,0 +1,3 @@
+Untuk tabel MK-Nilai sudah memenuhi aturan-aturan Normalisasi, namun masih dalam normalisasi 1NF,
+Karena data tersebut masih bertumpuk dan belum dibagi-bagi yang nantinya akan menyebabkan redundansi
+pada data

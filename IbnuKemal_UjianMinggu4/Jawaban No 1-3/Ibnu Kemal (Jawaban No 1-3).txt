@@ -1,0 +1,12 @@
+Jawaban Ujian 4 Ibnu Kemal 
+
+1. Select id, title From book Where type = "Original"
+
+2. SELECT book.id AS "Book", book.title AS "Title", authors.first_name AS "Author's First Name", 
+   authors.last_name AS "Author's Last Name" from book 
+   inner join authors on book.author_id = authors.id
+
+3. SELECT book.id AS "Book", book.title AS "Title", authors.first_name AS "Authors First Name", 
+   authors.last_name AS "Authors Last Name", editors.first_name AS "Editors First Name", 
+   editors.last_name AS "Editors Last Name" from book inner join authors on book.author_id = 
+   authors.id inner join editors on book.editor_id = editors.id ORDER BY book.id ASC

@@ -1,0 +1,28 @@
+Jawaban No 5-7
+
+5. - Tabel : 
+	- author : id(pk), name, address, url
+	- publisher : id(pk), name, address, phone, url
+	- book : id(pk), isbn, title, release_year, price, author_id(fk), publisher_id(fk) 
+
+6. - author	: CREATE TABLE author(id varchar(2) not null primary key, name varchar(30), address varchar(20), url text);
+   - publisher	: Create TABLE publisher(id varchar(2) not null primary key, name varchar(30), phone varcchar(12), address varchar(20), url text);
+   - books	: CREATE TABLE books ( id varchar(2) not null primary key, isbn varchar(15), title varchar(30), release_year year, price int, author_id varchar(2), publisher_id varchar(2), CONSTRAINT author_id FOREIGN KEY(author_id) REFERENCES author(author_id), CONSTRAINT publisher_id FOREIGN KEY(publisher_id) REFERENCES publisher(publisher_id))
+
+7. - author
+	INSERT INTO author (`author_id`, `name`, `address`, `url`) VALUES 
+		('1', 'J.K. Rowling', 'London', 'https://www.jkrowling.com'),
+		('2', 'Charles Dickens', 'Landport', 'https://www.charlesdickenspage.com'),
+		('3', 'James Joyce', 'Iceland', 'https://jamesjoyce.ie/')
+
+   - publisher
+	INSERT INTO publisher (`publisher_id`, `name`, `phone`, `address`, `url`) VALUES 
+		('4', 'Bloomsburry Publishing', '+44 23198334', 'London', 'https://www.bloomsbury.com'), 
+		('5', 'Bradbury & Evans', '+44 3221748', 'London', 'https://www.royalacademy.org.uk/art-artists/organisation/bradbury-and-evans-london\r\n'), 
+		('6', 'Grant Richard LTD', '+44 88221234', 'London', 'https://en.wikipedia.org/wiki/Grant_Richards_(publisher)');
+
+   - books
+	INSERT INTO books(`id`, `isbn`, `title`, `release_year`, `price`, `author_id`, `publisher_id`) VALUES 
+		('7', '9921-2111-4234', 'Harry Potter', 1997, 500, '1', '4' ),
+		('8', '9287-4332-1234', 'Bleak House', 1852, 350, '2', '5' ),
+		('9', '8272-2241-8209', 'Dubbliners', 1914, 450, '3', '6' )
